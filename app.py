@@ -26,16 +26,17 @@ from qualifier.filters.loan_to_value import filter_loan_to_value
 
 
 
-def save_csv(qualifying_data):
+def save_csv(data_to_save,path_to_save):
     """Saves the qualifying data to a CSV file.
 
-    Args:
-        qualifying_data (list of lists): The qualifying data.
+    Args: data_to_save (list/directory) : data that will be saved to the file
+          path_to_save : path to csv file
+        
     """
-    csvpath = Path("loan_output.csv")
-    with open(csvpath,'w',newline=' ') as csvfile:
+    csvpath=path_to_save
+    with open(csvpath,'w',newline='') as csvfile:
         csvwriter = csv.writer (csvfile)
-        for row in qualifying_data:
+        for row in data_to_save:
             csvwriter.writerow(row)
     # Print function to make sure that the function works propery.
     print("CSV file saved") # development purposes, will be deleted
@@ -128,9 +129,11 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
-
+    save_question=questionary.confirm("Do you want to save Qualifying Loans to a file?").ask()
+    if save_question == True:
+        path_question = questionary.path("The file will be saved. Enter a file path.").ask()
+        save_csv(qualifying_loans,path_question)
+    
 
 def run():
     """The main function for running the script."""
@@ -152,3 +155,5 @@ def run():
 
 if __name__ == "__main__":
     fire.Fire(run)
+   
+
