@@ -1,33 +1,55 @@
-# Project Title
+# Loan Qualifier Application
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This is a python command-line interface application for saving the qualifying loans to a new CSV file. The application takes in a `daily_rate_sheet` of loan criteria from various loan providers, asking the user a number of questions to evaluate their loan eligibility, creating a list of qualifying loans, asking whether the user wants to save this list and asks for the output file path. 
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This project leverages python 3.7 with the following packages:
+
+* [fire](https://github.com/google/python-fire) - library for automatically generating command line interfaces (CLIs)
+
+* [questionary](https://github.com/tmbo/questionary) - library for interactive user prompts and dialogs
+
+* [csvkit](https://docs.python.org/3/library/csv.html) - module for importing and exporting spreadsheets and databases in Comma Separated Values format
+
+* [sys](https://docs.python.org/3/library/sys.html) - module that provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+You need to install the following dependencies before you run the application:
+
+```python
+  pip install fire
+  pip install questionary
+  pip install csvkit
+```
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+Before using the loan qualifier application clone the repository and run the **app.py** with:
+
+```python
+python app.py
+```
+
+When the loan qualifier application opens, you will see the following prompts:
+![Screenshot of CLI](Screenshots/loan_qualifier_1.png)
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Author: Magdalena Svimberska
+email: magdalena.svimberska@gmail.com
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+GNU General Public License
