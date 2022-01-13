@@ -39,7 +39,7 @@ python app.py
 ```
 
 When the loan qualifier application opens, you will see the following prompts:
-![Screenshot of CLI](Screenshots/loan_qualifier_1.png)
+![Screenshot of CLI](Screenshots/loan_qualifier_1.PNG)
 
 ---
 
