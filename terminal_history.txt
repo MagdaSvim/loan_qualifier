@@ -1,0 +1,15 @@
+Invalid macro definition.
+cd Desktop\FinTech-Workspace\Week_2\loan_qualifier_app
+conda activate dev
+python app.py
+conda deactivate
+doskey /history 50
+doskey /history
+cd ..
+cd..
+doskey /history
+cd Week_2
+cd loan_qualifier_app
+cd data
+qualifying_loans.csv
+doskey /history 50 > terminal_history.txt
