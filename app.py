@@ -38,9 +38,6 @@ def save_csv(data_to_save,path_to_save):
         csvwriter = csv.writer (csvfile)
         for row in data_to_save:
             csvwriter.writerow(row)
-    # Print function to make sure that the function works propery.
-    print("CSV file saved") # development purposes, will be deleted
-
  
 
 
